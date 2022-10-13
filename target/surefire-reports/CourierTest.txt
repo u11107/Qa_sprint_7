@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: CourierTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.186 s <<< FAILURE! - in CourierTest
+shouldCreationCourierBlankFieldFirstName(CourierTest)  Time elapsed: 0.525 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <201>.
+
+	at CourierTest.shouldCreationCourierBlankFieldFirstName(CourierTest.java:67)
+
+shouldCreationCourierNoFirstName(CourierTest)  Time elapsed: 0.424 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <201>.
+
+	at CourierTest.shouldCreationCourierNoFirstName(CourierTest.java:56)
+
+shouldCreationCourierExistingFieldLogin(CourierTest)  Time elapsed: 0.688 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: is "Этот логин уже используется"
+  Actual: Этот логин уже используется. Попробуйте другой.
+
+	at CourierTest.shouldCreationCourierExistingFieldLogin(CourierTest.java:122)
+

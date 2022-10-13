@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: LoginTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 63.137 s <<< FAILURE! - in LoginTest
+shouldCourierLoginWithoutPasswordField(LoginTest)  Time elapsed: 60.805 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <504>.
+
+	at LoginTest.shouldCourierLoginWithoutPasswordField(LoginTest.java:74)
+
