@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 
 public class BaseClass {
 
-    private final static String URL = "https://qa-scooter.praktikum-services.ru/api/v1";
+    private final static String URL = "https://qa-scooter.praktikum-services.ru";
 
     protected static RequestSpecification spec() {
         return given()

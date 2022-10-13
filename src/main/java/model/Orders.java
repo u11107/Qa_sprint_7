@@ -3,14 +3,12 @@ package model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@RequiredArgsConstructor
 public class Orders {
 
     private String firstName;
@@ -22,5 +20,6 @@ public class Orders {
     private String deliveryDate;
     private String comment;
     private List<String> scooterColor;
-
+    public Orders(List<String> scooterColor) {
+    }
 }

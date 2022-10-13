@@ -14,15 +14,9 @@ public class DataGeneratorCourier {
     @Step("Создание случайных данных для курьера (логин, пароль, имя)")
     public static Courier getCourier() {
         Faker faker = new Faker();
-        var login = faker.name().username().toUpperCase();
+        var login = faker.name().firstName();
         var password = faker.random().hex(9);
         var firstName = faker.name().firstName();
         return new Courier(login, password, firstName);
-    }
-
-
-    public static void main(String[] args) {
-
-        System.out.println(getCourier());
     }
 }

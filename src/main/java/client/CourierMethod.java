@@ -3,6 +3,7 @@ package client;
 import base.BaseClass;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
+import model.Courier;
 import model.LoginDetailsCourier;
 
 import static io.restassured.RestAssured.given;
@@ -11,11 +12,10 @@ public class CourierMethod extends BaseClass {
 
     private static final String COURIER = "api/v1/courier/";
     private static final String LOGIN = "login";
-
     private static final String COURIER_ID = "courierId";
 
-    @Step("Создание курьера с параметрами {courier}")
-    public ValidatableResponse createCourier(CourierMethod courier) {
+    @Step("Создание курьера с параметрами")
+    public ValidatableResponse createCourier(Courier courier) {
         return given()
                 .spec(spec())
                 .body(courier)
@@ -38,8 +38,8 @@ public class CourierMethod extends BaseClass {
     }
 
     @Step("Удаление курьера с id {courierId}")
-    public ValidatableResponse deleteCourier(int courierId) {
-        return given()
+    public void deleteCourier(int courierId) {
+        given()
                 .spec(spec())
                 .log().all()
                 .when()

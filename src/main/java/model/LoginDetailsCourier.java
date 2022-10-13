@@ -7,6 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class LoginDetailsCourier {
     private String login;
-
     private String password;
 }

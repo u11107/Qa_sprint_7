@@ -7,8 +7,11 @@ import net.datafaker.Faker;
 
 import java.util.Collections;
 
+
+
 @AllArgsConstructor
 public class DataGeneratorOrder {
+
 
     @Step("Создание случайных данных для курьера (логин, пароль, имя)")
     public static Orders getOrders() {
